@@ -9,8 +9,9 @@ from keras.applications.imagenet_utils import preprocess_input, decode_predictio
 from keras.models import load_model
 from keras.preprocessing import image
 
+filepath="Best1ResNet.hdf5"
+resNet.load_weights("Best1ResNet.hdf5")
 
-resnet = ResNet50(weights = 'imagenet', input_shape = (224, 224, 3), pooling = 'avg')
 print("+"*50, "Model is loaded")
 
 application = Flask(__name__)
